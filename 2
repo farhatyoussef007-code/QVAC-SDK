@@ -1,0 +1,25 @@
+2. Create index.js with this code:
+const { Qvac } = require('@qvac/sdk');
+
+async function run() {
+  try {
+    // Initialize QVAC SDK
+    const qvac = new Qvac();
+
+    // Load the 'text' AI model (downloads automatically on first run)
+    await qvac.loadModel('text');
+
+    // Input text to process
+    const inputText = "Hello, how are you today?";
+
+    // Run the AI model on the input text
+    const result = await qvac.run('text', inputText);
+
+    // Output the AI response
+    console.log('AI response:', result);
+  } catch (error) {
+    console.error('Error running QVAC AI:', error);
+  }
+}
+
+run();
