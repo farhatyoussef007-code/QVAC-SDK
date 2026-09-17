@@ -25,6 +25,7 @@ async function run() {
 }
 
 run();
+
 3. Run the app
 In your terminal, run:
 
